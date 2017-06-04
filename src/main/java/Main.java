@@ -29,6 +29,7 @@ public class Main {
 
         staticFiles.location("/publico");
 
+        //http://localhost:4567/inicio/
         new Templates().TempFreeMarker(cons);
 
     }
