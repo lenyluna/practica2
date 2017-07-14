@@ -17,6 +17,7 @@ import static spark.Spark.*;
  */
 public class Main {
     public static void main(String[] args) {
+        port(getPuertoHeroku());
         Console cons = new Console();
         Estudiante estudiante= new Estudiante(20130867, "leny", "luna","533435");
         Estudiante estudiante1 = new Estudiante(20131000, "pepe", "guzman","7245621");
@@ -29,7 +30,7 @@ public class Main {
 
         staticFiles.location("/publico");
 
-        port(getPuertoHeroku());
+
         //http://localhost:4567/inicio/
         new Templates().TempFreeMarker(cons);
 
