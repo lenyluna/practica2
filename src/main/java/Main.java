@@ -29,9 +29,17 @@ public class Main {
 
         staticFiles.location("/publico");
 
+        port(getPuertoHeroku());
         //http://localhost:4567/inicio/
         new Templates().TempFreeMarker(cons);
 
     }
 
+    static int getPuertoHeroku() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        if (processBuilder.environment().get("PORT") != null) {
+            return Integer.parseInt(processBuilder.environment().get("PORT"));
+        }
+        return 4567; //En caso de no pasar la información, toma el puerto 4567
+    }
 }

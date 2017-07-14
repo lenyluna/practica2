@@ -51,7 +51,7 @@ public class Templates {
 
         get("/vista/:matricula", (request, response) -> {
 
-            int mat= Integer.parseInt(request.params("matricula" ));
+            int mat= Integer.parseInt(request.params("matricula"));
             Estudiante est= cons.find(mat);
             Map<String, Object> attributes = new HashMap<>();
             attributes.put("titulo","Estudiante");
