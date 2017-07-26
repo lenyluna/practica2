@@ -1,15 +1,13 @@
-import java.util.ArrayList;
-
 /**
- * Created by Leny96 on 2/6/2017.
+ * Created by Leny96 on 26/7/2017.
  */
-public class Estudiante {
-    private int matricula;
-    private String nombre;
-    private String apellido;
-    private String telefono;
+public class estudiante {
+    int matricula;
+    String nombre;
+    String apellido;
+    String telefono;
 
-    public Estudiante(int matricula, String nombre, String apellido, String telefono) {
+    public estudiante(int matricula, String nombre, String apellido, String telefono) {
         this.matricula = matricula;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -47,5 +45,4 @@ public class Estudiante {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-
 }
